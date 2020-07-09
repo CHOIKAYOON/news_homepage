@@ -136,7 +136,7 @@ $violet: #7950f2;
 ```
 -----
 
-## * containers/NewsContainer.js
+## * Containers/NewsContainer.js
 ```
 import React,{ Component } from 'react';
 import NewsList from '../components/NewsTemplate';
