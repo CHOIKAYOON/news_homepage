@@ -19,7 +19,7 @@ React를 이용해서 구현했습니다. 네이버 뉴스 검색 API를 사용�
   * servert.js (cors 보안상의 문제로 외부 API를 호출할 수 있게 해주는 서버 구현)
 ------
 
-## Components/NewsTemplate.js
+## * Components/NewsTemplate.js
 
 ``` import React, { Component } from 'react';
 import style from './NewsTemplate.scss';
@@ -67,7 +67,7 @@ export default NewsList;
 ```
 -------
 
-## Components/NewsTemplate.scss
+## * Components/NewsTemplate.scss
 ```
 $red: #fa5252;
 $orange: #fd7e14;
@@ -136,7 +136,7 @@ $violet: #7950f2;
 ```
 -----
 
-## containers/NewsContainer.js
+## * containers/NewsContainer.js
 ```
 import React,{ Component } from 'react';
 import NewsList from '../components/NewsTemplate';
@@ -154,7 +154,7 @@ class NewsContainer extends Component{
 export default NewsContainer
 ```
 --------
-## App.js
+## * App.js
 ```
 import React, { Component } from 'react';
 import style from './App.scss';
@@ -200,7 +200,7 @@ export default App;
 
 ----
 
-## lib/api.js
+## * lib/api.js
 ```
 import axios from "axios";
 
@@ -215,7 +215,7 @@ export const getApi = async () => {
 }
 ```
 -------
-## server/server.js
+## * server/server.js
 ```
 const express = require('express');
 const app = express();
