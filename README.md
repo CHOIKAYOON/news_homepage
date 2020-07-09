@@ -11,7 +11,7 @@ React를 이용해서 구현했습니다. 네이버 뉴스 검색 API를 사용�
   * NewsContainer.js (외부 API를 Components에 연결해주는 페이지)
 * lib
   * api.js (네이버 검색 외부 API 호출 함수 구현)
-* App.js
+* App.js (외무 API를 State에 넣어서 상태값 설정)
 * server
   * servert.js (cors 보안상의 문제로 외부 API를 호출할 수 있게 해주는 서버 구현)
 ------
@@ -151,6 +151,51 @@ class NewsContainer extends Component{
 export default NewsContainer
 ```
 --------
+#### App.js
+```
+import React, { Component } from 'react';
+import style from './App.scss';
+import className from 'classnames';
+import * as api from '../src/lib/api';
+import NewsContainer from '../src/containers/NewsContainer'
+
+//Sass사용을 위해 classname에 파일을 묶어서 변수 선언
+const ex = className.bind(style);
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    
+    //state 초기값 설정
+    this.state = {
+      selecteItems : [] 
+    };
+  }
+
+//React 렌더링 시 외부 API 함수 호출 하도록 선언.
+  componentDidMount() {
+    api.getApi()
+    //받아온 값을 state 초기 상태에 선언
+    .then(res =>this.setState({
+      selecteItems : res.data.items
+    }))
+  }
+
+  
+  render() {
+    return (
+      <div className={ex('content')}>
+      //받아온 상태값 컨테이너 파일에 전달
+          <NewsContainer selecteItems = {this.state.selecteItems}/>
+      </div>
+    )
+  }
+}
+
+export default App;
+```
+
+----
 
 #### lib/api.js
 ```
