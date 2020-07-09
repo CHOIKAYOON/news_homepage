@@ -1,6 +1,8 @@
 news_homepage
 -------
+
 React를 이용해서 구현했습니다. 네이버 뉴스 검색 API를 사용해서 코로나 실시간 뉴스를 확인하는 웹 어플리케이션 입니다.
+
 ![d](https://user-images.githubusercontent.com/31337244/87025590-9352cb80-c215-11ea-88cb-d648ca48a1bf.JPG)
 
 
