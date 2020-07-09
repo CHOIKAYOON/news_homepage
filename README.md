@@ -6,7 +6,7 @@ React를 이용해서 구현했습니다. 네이버 뉴스 검색 API를 사용�
 ![d](https://user-images.githubusercontent.com/31337244/87025590-9352cb80-c215-11ea-88cb-d648ca48a1bf.JPG)
 
 
-컴포넌트 구조
+## 컴포넌트 구조
 * Components
   * NewsTemplate.js ( 외부 API를 뿌려주는 페이지 및 기본 html 기본 틀)
   * NewsTemplate.scss 
