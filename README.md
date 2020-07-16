@@ -21,7 +21,7 @@ React를 이용해서 구현했습니다. 네이버 뉴스 검색 API를 사용�
 
 ## * Components/NewsTemplate.js
 
-``` import React, { Component } from 'react';
+`` import React, { Component } from 'react';
 import style from './NewsTemplate.scss';
 import className from 'classnames';
 
@@ -64,7 +64,7 @@ class NewsList extends Component {
 }
 
 export default NewsList;
-```
+``
 -------
 
 ## * Components/NewsTemplate.scss
